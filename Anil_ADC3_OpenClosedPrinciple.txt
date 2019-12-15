@@ -1,0 +1,37 @@
+Open/ Closed Principle (OCP)
+
+The Open Closed principle in SOLID principal tells the developers that built software should have functionality of adding and extending features but one cannot have access to modify it’s base code.
+Every Operating system implements this principle for example one can add/ install softwares in operating system to extend its features but they do not have access to kernel code.
+
+For Example:
+ 
+Senario: You are a retail shop owner and you have been giving discounts to all customers but now you want to give double discount to the VIP customer.
+
+
+Class Discount:
+	def __init__(self, customer, price):
+		self.customer = customer
+		self.price = price
+	
+	def giveDiscount(self):
+		if self.customer == “regular”:
+			self.price =self.price *0.2
+			return self.price
+		if self.customer == “VIP”:
+			self.price = self.price*0.4
+			return self.price
+
+This code does the work but this code does not obey OCP. In order for this code to obey OCP the additional feature (giving double discount to VIP customer) should have seperate class.
+	
+Class Discount:
+	def __init__(self, customer, price):
+		self.customer = customer
+		self.price = price
+	
+	def giveDiscount(self):
+		return self.price =self.price *0.2
+			
+Class VIPDiscount(Discount):
+		def giveDiscount(self):
+			return super().giveDiscount()*2
+Now this code obeys OCP.
