@@ -1,0 +1,12 @@
+This principle teaches us that one class or module should only function one task.
+
+If it does more than one task then it is coupled and it violates the SRP.
+
+For example:
+
+class PriceCalculator:
+
+	def calculatePrice(self, marked_price, discount):
+		total = (marked_price - discount) + VAT
+		return total
+
