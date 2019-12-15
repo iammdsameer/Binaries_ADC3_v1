@@ -1,0 +1,13 @@
+Liskov substitution principle
+
+In programming, the Liskov substitution principle states that if S is a subtype of T, then objects of type T may be replaced (or substituted) with objects of type S.
+
+This can be formulated mathematically as
+Let q(x) be a property provable about objects x of type T.
+Then q(y) should be true for objects y of type S, where S is a subtype of T.
+
+More generally it states that objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
+
+Let's take an example,
+   Ostrich is a bird which inherits the class bird but it can fly. It means this violates LSP.
+   So ostrich should not inherit bird class and there should be a separate class for birds that can't fly and it should inherit that class. 
