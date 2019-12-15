@@ -1,0 +1,19 @@
+Git Clone:
+	Git Clone creates a clone of the exact same repo to other machine.
+
+Git Push:
+	Git Push does the work of uploading the local repo to the remote repo.
+
+Git Pull:
+	Git Pull fetches the updated files from remote to local machine.
+
+Merge Conflict:
+	If two developers make changes simultaneously in the same file, more precisely on the same line, git gets confused on which change to accept. At that situation, developer should manually select the change. This is merge conflict.
+
+Git Branches:
+	Git Branches creates a different arena for the developers where they can make change and that change doesn't affect the main code.
+
+Git Commit:
+	Every change needs to be commited to save the changes made to the repo.
+
+
